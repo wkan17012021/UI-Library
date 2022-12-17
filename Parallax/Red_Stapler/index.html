@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Effect</title>
+    <style>
+      body,
+      html {
+        width: 100%;
+        /* max-width: 1440px; */
+        margin: 0;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      .parallax {
+        width: 100%;
+        margin: 0 auto;
+        /* min-height: 100vh; */
+        height: 80vh;
+        background: url('/Red_Stapler/robin-kutesa-wmhhsI7GUQ8-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .content-div {
+        width: 100%;
+        height: 200vh;
+      }
+      .headline {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 350px;
+        color: antiquewhite;
+        position: fixed;
+        top: 10vh;
+        width: 100%;
+        text-align: center;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+      }
+      .mask {
+        mask: url('Sky2.svg');
+        mask-size: cover;
+        mask-position: center;
+        -webkit-mask: url('Sky2.svg');
+        -webkit-mask-size: cover;
+        -webkit-mask-position: center;
+        width: 100%;
+        height: 100%;
+      }
+      h2, li, p {
+        font-size: 36px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="mask">
+        <span class="headline">CSS MASK</span>
+      </div>
+    </div>
+    <div class="content-div">
+        <ol>
+            <li>Markup consists of a single container which will act as the parallax / css masking context and then a wrapper below for content / next section.</li>
+            <li>Inside the parallax wrapper, nest in another inner container for the mask feature and within that, nest in the header of title text. The text will show in the top half of the image overlying the sky. Then, upon scroll, the text will disappear behind the lower half of the image e.g. building.</li>
+            <li>Used Figma to import the image, draw a polygon around the part of the image where you want the text to appear i.e. the sky. Do not resize the image as the mask svg needs to match the dimensions of the original image.</li>
+            <li>Fill in the sky polygon in black. Export only the sky polygon as an svg.</li>
+            <li>Set the styles for the parallax container which will act as the base background layer: background image (original image), position, no-repeat, size, height, width etc.</li>
+            <li>Set header text styles, the main setting being fixed positioning and how much from the top.</li>
+            <li>Set the mask continer style properties, include webkit prefixes. Import the svg as the mask layer.</li>
+            <li>Similar to the background properties, set the mask properties so that it fits the dimensions of the wrapper which is using the background image.</li>
+        </ul>
+        <h2>Notes</h2>
+        <p>The illusion works well when the mask contact (skyline, treeline etc.) is accurate. The roof straight edges make it easier to draw which saves time.</p>
+        <p>In terms of responsiveness, I used background-position & mask-position: center; as it suited my image to maintain that portion of the image as the browser width changes but it will depend on what media you use.</p>
+        <p>It would be nice to combine this mask with a parallax as at the moment, it doesn't have the perception of changing field of view as you scroll.</p>
+    </div>
+  </body>
+</html>

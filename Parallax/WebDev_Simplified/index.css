@@ -1,0 +1,55 @@
+*, body {
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* wrapper class is the scrolling context */
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    scroll-behavior: smooth;
+}
+/* set the inner wrapper containing the media to have the same height as the parent. We use the transform-style property to set whether children of an element are positioned in the 3D space or are flattened in the plane of the element. */
+.inner-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+/* apply transforms to move the background mountains and foreground trees in the z-direction of the screen. Larger negative numbers means further back from the screen. Account for this perception further away by increasing the scale. */
+.bkgnd {
+    transform: translateZ(-15px) scale(2.5);
+}
+.forgnd {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.bkgnd, .forgnd {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #333;
+    color: wheat;
+}
+
+.title {
+    color: whitesmoke;
+}
+
+.lorem {
+    margin-top: 4rem;
+}

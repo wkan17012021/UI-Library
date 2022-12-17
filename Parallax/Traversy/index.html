@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed scrolling</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="pimg1">
+      <div class="ptext">
+        <span class="border">Fixed Scroll Parallax imitation</span>
+      </div>
+    </div>
+    <section class="section section-light">
+      <h2>The Markup</h2>
+      <p>
+        Create three parent containers which will act as the parallax-like scroll context i.e. the images. Within each of the three parent containers, we add our header or title that overlies the image. We will center this text vertically and horizontally.
+        Add separate containers after each of the three parent containers for the copy text and this allows us to scroll the page down as well as breaking up the monotony of the page. 
+      </p>
+    </section>
+
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border">Dusk</span>
+      </div>
+    </div>
+    <section class="section section-dark">
+      <h2>CSS</h2>
+      <p>
+        Use background properties to place the image, min-heights, position it, no repeat, cover the wrapper etc. Add colour, typeface, sizes etc. to contrast sections. Adjust settings to suit your images. 
+      </p>
+    </section>
+
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border">Dusk</span>
+      </div>
+    </div>
+    <section class="section section-dark">
+      <h2>Section Three</h2>
+      <p>
+        We use the CSS property background-attachment: fixed; which means the background image remains fixed in position while the other content scrolls down the page. The default is 'scroll' which means both the image and content will be scrolled out of view proportionally down the page.
+        Although this gives the appearance of delayed scrolling, it is not quite a parallax effect. This is when parts of the website scroll or move a different pace from other parts often used to differentiate between background and foreground. It is an optical illusion that gives a sense of depth of view.
+        It is advised to turn off the parallax effect on mobile.
+      </p>
+    </section>
+    <div class="pimg1">
+      <div class="ptext">
+        <span class="border">Repeat first image</span>
+      </div>
+    </div>
+    <section class="section section-light">
+      <h2>Section Four</h2>
+      <p>
+        You can watch the tutorial where Brad goes into more depth stepping through this <a href="https://www.youtube.com/watch?v=JttTcnidSdQ&t=64s">demo</a>
+      </p>
+    </section>
+  </body>
+</html>
