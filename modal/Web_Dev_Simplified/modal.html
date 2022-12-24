@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <title>Modal by Web Dev Simplified</title>
+</head>
+<body>
+    <div  class="container">
+        <button data-modal-target="#modal" class="open-sesame">Open Modal</button>
+        <div id="modal" class="modal">
+            <div class="header">Example Modal
+                <button data-close-button>&times;</button>
+            </div>
+            
+            <div class="body">The general markup here is a wrapper with a button to initiate the popup: we used custom data attrs so we don't confuse css classes with functionality. The data-modal-target is assigned to the id of the modal wrapper. Then we have another container holding the modal title, this body text and the closing button. We used the html equivalent symbol for the close icon instead of the x as font because the font would scale with containers or size applied to it through css. Outside this wrapper, we added another div to give a greyed out background when the modal is active. The pain points were dom manipulation: forgetting that you can't modify a tag directly if it is a node list: iterate through to allow access to DOM manipulation methods.
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </div>
+    <script defer src="/Web_Dev_Simplified/modal.js">
+        
+    </script>
+</body>
+</html>
