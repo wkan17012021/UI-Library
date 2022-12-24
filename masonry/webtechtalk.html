@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS masonry</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            columns: 4;
+        }
+
+        .card-wrapper {
+            width: 380px;
+            padding: 20px;
+            background-color: bisque;
+            border: 1px solid gainsboro;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+
+        .img-card {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .card-wrapper:hover {
+            background-color: darkseagreen;
+            cursor: pointer;
+            transition: 1s ease-in-out;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A CSS masonry based off WebTech Talk</h1>
+    <a href="https://www.youtube.com/watch?v=-isQPqqnIBo">Video URL</a>
+    <h2>Uses columns and break-inside properties to achieve specific custom masonry layout (finite number of cards). The overlap between columns is controlled by content and to achieve responsiveness, apply custom media queries.</h2>
+    <h3>As of 2022, masonry can not be achieved with CSS alone if you want the layout to auto-fill when you have new content and be responsive. It requires a javascript library. There is an experimental property <code>grid-template-rows: masonry</code>coupled with display grid and template columns. But, it has no support on browser yet.</h3>
+    <section class="container">
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1560684352-8497838a2229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1428&q=80" alt="Flat-lay photo of Clam Chowder Soup">
+            <h2 class="title">Clam Chowder Soup</h2>
+            <p class="blurb">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, reiciendis.</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="flat-lay photography of cooked meat and sauce platter">
+            <h2 class="title">Cape Verde Speciality</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nulla quo deleniti nobis error esse saepe quidem delectus porro illum.</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1557748362-4e95f0de4f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1444&q=80" alt="poached eggs, avocado spread on toast with rocket salad">
+            <h2 class="title">Breakfast eggs</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt minima aperiam voluptates optio eius cumque recusandae vero dicta numquam! Autem incidunt illo iusto? Harum asperiores corporis voluptatibus? Eos, consequatur.</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="bacon, lettuce, tomato cheeseburger">
+            <h2 class="title">BLT FTW</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis a ab libero cupiditate facilis adipisci optio aperiam officia corrupti laudantium! Sapiente impedit inventore tenetur. Ullam aliquid accusamus esse? Earum, laborum? Autem dolorum optio excepturi unde nobis molestiae inventore quo tempore.</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80" alt="sliced of vegetables with yellow sauce on ceramic plate">
+            <h2 class="title">Vegetarian Option</h2>
+            <p class="blurb">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero odit dolorem deleniti omnis perferendis laudantium officiis rem natus est similique. Explicabo, natus a rem voluptatum ea veritatis iusto nulla, accusantium porro, consectetur quaerat. Magnam laboriosam consequuntur eius commodi? Quidem at, architecto totam labore nisi quae perferendis dolores magnam harum odio voluptatem enim? Doloribus vel temporibus exercitationem excepturi maxime quo voluptatibus odit nobis illum quod animi, ut non architecto? Error reiciendis inventore sapiente, aliquam atque dolorem possimus in vitae obcaecati laborum!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="thin crust pizza">
+            <h2 class="title">Pizza</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero doloremque facere voluptatum similique rerum quae veritatis temporibus ut! Incidunt!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1560684352-8497838a2229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1428&q=80" alt="Flat-lay photo of Clam Chowder Soup">
+            <h2 class="title">Clam Chowder Soup</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae expedita tempore vel voluptates est aut temporibus molestiae laborum at ea blanditiis, doloribus hic neque dolorem alias, saepe perferendis cupiditate deleniti. Perspiciatis repudiandae eum delectus animi! Impedit architecto id nostrum ut beatae iste doloribus at nobis excepturi quasi velit quaerat reprehenderit unde laborum, consectetur obcaecati! Praesentium et quo doloremque ab possimus!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="flat-lay photography of cooked meat and sauce platter">
+            <h2 class="title">Cape Verde Speciality</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero doloremque facere voluptatum similique rerum quae veritatis temporibus ut! Incidunt!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1557748362-4e95f0de4f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1444&q=80" alt="poached eggs, avocado spread on toast with rocket salad">
+            <h2 class="title">Breakfast eggs</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta fugiat, repellat deleniti odio facere repellendus quia! In, illum earum. Voluptatibus eveniet architecto qui necessitatibus beatae aspernatur eius reiciendis, esse eligendi ipsa veniam illum cumque ipsam debitis, tenetur fugiat at repellat quod. Atque molestias, ipsa ab voluptate dicta beatae? Mollitia, at.</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="bacon, lettuce, tomato cheeseburger">
+            <h2 class="title">BLT FTW</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero doloremque facere voluptatum similique rerum quae veritatis temporibus ut! Incidunt!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80" alt="sliced of vegetables with yellow sauce on ceramic plate">
+            <h2 class="title">Vegetarian Option</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero doloremque facere voluptatum similique rerum quae veritatis temporibus ut! Incidunt!</p>
+        </div>
+        <div class="card-wrapper">
+            <img class="img-card" src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="thin crust pizza">
+            <h2 class="title">Pizza</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta eos, natus recusandae mollitia repellendus blanditiis deleniti explicabo dolores consequuntur perferendis ea ex maiores dignissimos sed facilis. Id quis praesentium minima in saepe! Sunt nisi velit maxime asperiores hic ab?</p>
+        </div>
+    </section>
+</body>
+</html>
