@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabs.css">
+    <title>Tabs Panel</title>
+</head>
+<body>
+    <section class="container">
+        <ul id="#tab-list">
+            <li data-grab="#tab-one">Video Link for Tutorial</li>
+            <li data-grab="#tab-two">event.target</li>
+            <li data-grab="#tab-three">Tab 3</li>
+        </ul>
+        <div id="tab-one" class="tab-panel active">Net Ninja on the money again: https://www.youtube.com/watch?v=CRj0LJ2rhbw</div>
+        <div id="tab-two" class="tab-panel">Within the listener function, event.target refers to the element on which the event was triggered (as does the this keyword, unless  we are using an arrow function). Thus you can easily access its properties</div>
+        <div id="tab-three" class="tab-panel">Tab 3 details.</div>
+    </section>
+    <script src="./tabs.js"></script>
+</body>
+</html>
