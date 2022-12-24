@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accordion.css">
+    <title>Vanilla JS accordion</title>
+</head>
+<body>
+    <section class="container">
+        <ul class="accordion-list">
+            <li class="accordion-control">
+                <button >First</button>
+                <div class="accordion-panel"><p>Attempted the accordion based on google searches but got stuck on applying event listeners to multiple elements as I forgot that you can't add event listener to an object or array.</p></div>
+            </li>
+            <li class="accordion-control">
+                <button >Second</button>
+                <div class="accordion-panel"><p>Ended up finding out how to resolve with Wes Bos' flex panel for DOM manip and this video as an alternative functionality: <a href="https://www.youtube.com/watch?v=dPLHi7tsoFU">Speed Coading</a></p></div>
+            </li>
+            <li class="accordion-control">
+                <button >Third</button>
+                <div class="accordion-panel"><p>There's a lot of styling, RWD and pseudo classes that could be applied. This also doesn't have the feature where one section panel opens and auto closes others. I got stuck on applying the click event on the button but wanted to change the display for the nested elements, wasn't sure what DOM methodds to use. The toggle from display none to 'block' is a bit jarring, maybe a transition scoll style could be applied so the movement is not instantaneous.</p></div>
+            </li>
+        </ul>
+    </section>
+    <script src="/accordion.js" type="text/javascript"></script>
+</body>
+</html>
