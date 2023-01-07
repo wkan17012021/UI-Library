@@ -1,0 +1,184 @@
+/* Styles for text placement */
+h2, h3 {
+  color: white;
+}
+
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.txt-base {
+  border: 1px solid red;
+  height: 25%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.txt-right {
+  border: 1px solid red;
+  width: 60%;
+  background-color: #0099BF;
+  vertical-align: text-bottom;
+}
+
+.grid-container > div {
+  container-type: inline-size;
+}
+
+@container (max-width: 1000px) {
+  h2 {
+    font-size: 5cqw; 
+  }
+  h3 {
+    font-size: 8cqw; 
+  }
+}
+
+/* styles for cell background pictures */
+
+#community, #survey, #climate {
+  background-color: #005B6F;
+}
+
+#scholarship, #funding, #blog, #events, #award {
+  background-color: #0099BF;
+}
+
+#event-location {
+  background: url("/assets/event_location.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#scholarship {
+  background: url("/assets/scholarship.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#funding {
+  background: url("/assets/apply_funding.webp") no-repeat center;
+  background-size: cover;
+}
+
+#blog {
+  background: url("/assets/womens_rights.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#peace {
+  background: url("/assets/peace.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#events {
+  background: url("/assets/events.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#award {
+  background: url("/assets/award.webp") no-repeat right;
+  background-size: cover;
+}
+
+
+#survey {
+  background: url("/assets/survey.jpg") no-repeat bottom;
+  background-size: cover;
+}
+
+#impact {
+  background: url("/assets/social_impact.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* base styles for mobile masonry grid */
+.grid-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* clearfix */
+.grid-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 100%; 
+}
+
+.grid-item {
+  height: 10rem;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-item--width2 { width:  100%; }
+.grid-item--height2 { height: 15rem; }
+.grid-item--height3 { height: 20rem; }
+.grid-item--height4 { height: 5rem; }
+
+
+/* 992px screen-md breakpoint */
+
+@media screen and (min-width: 540px){
+  .grid-container {
+    width: 100%;
+}
+.grid-sizer,
+.grid-item {
+  width: 33%;
+}
+.grid-item {
+  height: 12rem;
+}
+.grid-item--width2 { 
+  width: 66%; 
+}
+.grid-item--height2 { 
+  height: 24rem; 
+}
+.grid-item--height3 { 
+  height: 16rem; 
+}
+.grid-item--height4 { 
+  height: 12rem; 
+}
+}
+
+@media screen and (min-width: 992px){
+  .grid-container {
+    width: 90%;
+    max-width: 2400px;
+}
+.grid-sizer,
+.grid-item {
+  width: 20%;
+}
+.grid-item {
+  height: 16rem;
+}
+.grid-item--width2 { 
+  width:  40%; 
+}
+.grid-item--height2 { 
+  height: 32rem; 
+}
+.grid-item--height3  { 
+  height: 24rem; 
+}
+.grid-item--height4 { 
+  height: 8rem; 
+}
+}

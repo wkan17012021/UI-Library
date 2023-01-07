@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/resets.css" />
+    <link rel="stylesheet" href="/masonryJS/masonryJS.css" />
+    <title>MasonryJS</title>
+  </head>
+  <body>
+    <h1>Masonry JS Library and Difficulties I found</h1>
+    <a href="https://masonry.desandro.com/layout.html">Link Here</a>
+    <ul>
+        <li>On page load, there is about 1 to 2 second delay where you can see the layout as a single column left aligned until the JS script kicks in and converts the layout to the mosaic / masonry style. The issue is a bad UX and significant Cumulative Layout Shift. Possibly this can be resolved with strategic management of the script in conjunction with page load, html and css parsing.</li>
+    <li>Images take about 1 to 2 seconds to render on the page. I used the images from UnSplash with large dimensions because they serve as backgrounds to the cells which need to reveal and hide different areas of the image dependnign on what screen size the layout is observed on. This could be resolved by compressing, scaling down images and using lower resolution media.  Also, a CDN would be needed to improve page performance.</li>
+    <li>As you drag the window browser to different widths, the page performance is noticeably laggy and may be unattractive to users.</li>
+    <li>On tablet size circa >540px width, there is some whitepace in the bottom right which I couldn't work out how to fill in. It requires trial and error playing around with widths and heights to see what works.</li>
+<li>The masonry style is based off in-line containers- now that we have CSS Flex and Grid principles, could this be done without a library? </li>
+<li>Could't work out how to add vertical and horizontal spacing between container cells. The docs do mention a gutter and margin-bottom property but the gutter appeared to move the masonry parent grid element off center and the margin-bottom didn't seem to space vertically the elements- perhaps because they are absolute positioned implemented by the js library?</li></ul>
+    <section class="grid-container">
+      <div class="grid-sizer"></div>
+      <div
+        id="event-location"
+        class="grid-item grid-item--width2 grid-item--height2 flex-end"
+      >
+        <h2 class="txt-base">Book tickets for our upcoming conference, 2023</h2>
+      </div>
+      <div id="community" class="grid-item sm-sq flex-end">
+        <h3>In Your Community</h3>
+      </div>
+      <div id="scholarship" class="grid-item flex-center">
+        <h3 class="txt-right">Apply for Scholarship</h3>
+      </div>
+      <div id="funding" class="grid-item flex-end">
+        <h3 class="txt-base">Apply for Funding</h3>
+      </div>
+      <div id="blog" class="grid-item flex-center">
+        <h3 class="txt-right">Latest Blog</h3>
+      </div>
+      <div id="highlights" class="grid-item sm-sq flex-end">
+        <h3 class="txt-base">Highlights video</h3>
+      </div>
+      <div id="academy" class="grid-item flex-end">
+        <h3 class="txt-base">Our Academy</h3>
+      </div>
+      <div id="peace" class="grid-item sm-sq flex-end">
+        <h3 txt-base>Building Peace around the World</h3>
+      </div>
+      <div id="events" class="grid-item flex-center">
+        <h3 class="txt-right">Upcoming Events</h3>
+      </div>
+      <div id="survey" class="grid-item grid-item--height3 flex-center">
+        <h3 class="txt-right">Have Your Say</h3>
+      </div>
+      <div
+        id="impact"
+        class="grid-item grid-item--width2 grid-item--height2 flex-end"
+      >
+        <h2 class="txt-base">Impact Tracker</h2>
+      </div>
+      <div id="award" class="grid-item flex-center">
+        <h3 class="txt-right">Awards: Politician of the Year Winners</h3>
+      </div>
+      <div id="AinA" class="grid-item flex-end">
+        <h3 class="txt-base">Ambassadors in Action</h3>
+      </div>
+      <div id="climate" class="grid-item flex-end grid-item--height4">
+        <h3>Action against Climate Disaster</h3>
+      </div>
+    </section>
+    <script src="/masonryJS/masonry.pkgd.min.js"></script>
+  </body>
+  <script>
+    var elem = document.querySelector('.grid-container')
+    var msnry = new Masonry(elem, {
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true,
+    })
+  </script>
+</html>
