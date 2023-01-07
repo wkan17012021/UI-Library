@@ -16,4 +16,6 @@ I may have iterated or changed the code from the learning resource to understand
 
 I tried to focus on solutions with plain JS / no frameworks.
 
+To observe the demos, clone and pull down the repo, cd into the desired folder and run the html file in your local server / localhost.
+
 Hopefully, there is a link to the resource, but if not I'm sure you can find a similar video on YT explaining the concept.
