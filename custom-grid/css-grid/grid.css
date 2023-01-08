@@ -1,0 +1,158 @@
+/* Styles for text placement */
+h2,
+h3 {
+  color: white;
+}
+
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.txt-base {
+  border: 1px solid red;
+  height: 25%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.txt-right {
+  border: 1px solid red;
+  width: 60%;
+  background-color: #0099bf;
+  vertical-align: text-bottom;
+}
+
+/* .grid-container > div {
+  container-type: inline-size;
+}
+
+@container (max-width: 1000px) {
+  h2 {
+    font-size: 5cqw;
+  }
+  h3 {
+    font-size: 8cqw;
+  }
+} */
+
+/* styles for cell background pictures */
+
+#academy,
+#community,
+#survey,
+#climate {
+  background-color: #005b6f;
+}
+
+#scholarship,
+#funding,
+#blog,
+#events,
+#award,
+#AinA {
+  background-color: #0099bf;
+}
+
+#event-location {
+  background: url('/assets/event_location.jpg') no-repeat bottom;
+  background-size: cover;
+}
+
+#scholarship {
+  background: url('/assets/scholarship.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#funding {
+  background: url('/assets/apply_funding.webp') no-repeat center;
+  background-size: cover;
+}
+
+#blog {
+  background: url('/assets/womens_rights.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#peace {
+  background: url('/assets/peace.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#events {
+  background: url('/assets/events.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#award {
+  background: url('/assets/award.webp') no-repeat right;
+  background-size: cover;
+}
+
+#survey {
+  background: url('/assets/survey.jpg') no-repeat bottom;
+  background-size: cover;
+}
+
+#impact {
+  background: url('/assets/social_impact.jpg') no-repeat center;
+  background-size: cover;
+}
+
+/* base styles for mobile-size grid */
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  min-width: 390px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-auto-rows: minmax(250px, auto);
+}
+
+#highlights {
+  display: flex;
+  flex-direction: column;
+}
+
+#highlights video {
+  width: 100%;
+}
+
+/* 540px screen-md breakpoint */
+
+@media screen and (min-width: 540px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row dense;
+  }
+  .grid-container > div {
+    grid-column: span 1;
+  }
+  #event-location,
+  #impact {
+    grid-column: span 2;
+  }
+}
+
+/* 992px screen-md breakpoint */
+
+@media screen and (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: row dense;
+    grid-auto-rows: minmax(200px, auto);
+  }
+  #event-location,
+  #impact {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}

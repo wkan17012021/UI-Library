@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resets.css">
+    <link rel="stylesheet" href="grid.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Custom native CSS grid and Difficulties I found</h1>
+    <ul><li>Relearning css grid properties- trial and error approach, time consuming</li>
+    <li>Potentially harder to scale and maintain dependant on code quality</li>
+<li>Can't seem to change the order of markup to suit more prominent items. E.g. Impact tracker div is fourth from last on mobile and third from last on tablet, can this be placed second from top so the order would be: event location then impact tracker div without changing markup order? But for desktop, the impact tracker item should be bottom right of the grid so the markup shouldn't change for this scenario.</li></ul>
+    <section class="grid-container">
+        <div
+        id="event-location"
+        class="grid-item grid-item--width2 grid-item--height2 flex-end"
+      >
+        <h2 class="txt-base">Book tickets for our upcoming conference, 2023</h2>
+      </div>
+      <div id="community" class="grid-item sm-sq flex-end">
+        <h3>In Your Community</h3>
+      </div>
+      <div id="scholarship" class="grid-item flex-center">
+        <h3 class="txt-right">Apply for Scholarship</h3>
+      </div>
+      <div id="funding" class="grid-item flex-end">
+        <h3 class="txt-base">Apply for Funding</h3>
+      </div>
+      <div id="blog" class="grid-item flex-center">
+        <h3 class="txt-right">Latest Blog</h3>
+      </div>
+      <div id="highlights" class="grid-item sm-sq flex-end">
+        <video src="https://assets.mixkit.co/videos/preview/mixkit-woman-giving-motivational-talk-on-dark-stage-with-bright-lights-13222-large.mp4" mute loop preload="none" controls></video>
+        <h3 class="txt-base">Highlights video</h3>
+      </div>
+      <div id="academy" class="grid-item flex-end">
+        <h3 class="txt-base">Our Academy</h3>
+      </div>
+      <div id="peace" class="grid-item sm-sq flex-end">
+        <h3 txt-base>Building Peace around the World</h3>
+      </div>
+      <div id="events" class="grid-item flex-center">
+        <h3 class="txt-right">Upcoming Events</h3>
+      </div>
+      <div id="survey" class="grid-item grid-item--height3 flex-center">
+        <h3 class="txt-right">Have Your Say</h3>
+      </div>
+      <div
+        id="impact"
+        class="grid-item grid-item--width2 grid-item--height2 flex-end"
+      >
+        <h2 class="txt-base">Impact Tracker</h2>
+      </div>
+      <div id="award" class="grid-item flex-center">
+        <h3 class="txt-right">Awards: Politician of the Year Winners</h3>
+      </div>
+      <div id="AinA" class="grid-item flex-end">
+        <h3 class="txt-base">Ambassadors in Action</h3>
+      </div>
+      <div id="climate" class="grid-item flex-end grid-item--height4">
+        <h3>Action against Climate Disaster</h3>
+      </div>
+      
+    </section>    
+</body>
+</html>
