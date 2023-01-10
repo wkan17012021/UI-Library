@@ -61,47 +61,47 @@ h3 {
 }
 
 #event-location {
-  background: url('/assets/event_location.jpg') no-repeat bottom;
+  background: url('../assets/event_location.jpg') no-repeat bottom;
   background-size: cover;
 }
 
 #scholarship {
-  background: url('/assets/scholarship.jpg') no-repeat center;
+  background: url('../assets/scholarship.jpg') no-repeat center;
   background-size: cover;
 }
 
 #funding {
-  background: url('/assets/apply_funding.webp') no-repeat center;
+  background: url('../assets/apply_funding.webp') no-repeat center;
   background-size: cover;
 }
 
 #blog {
-  background: url('/assets/womens_rights.jpg') no-repeat center;
+  background: url('../assets/womens_rights.jpg') no-repeat center;
   background-size: cover;
 }
 
 #peace {
-  background: url('/assets/peace.jpg') no-repeat center;
+  background: url('../assets/peace.jpg') no-repeat center;
   background-size: cover;
 }
 
 #events {
-  background: url('/assets/events.jpg') no-repeat center;
+  background: url('../assets/events.jpg') no-repeat center;
   background-size: cover;
 }
 
 #award {
-  background: url('/assets/award.webp') no-repeat right;
+  background: url('../assets/award.webp') no-repeat right;
   background-size: cover;
 }
 
 #survey {
-  background: url('/assets/survey.jpg') no-repeat bottom;
+  background: url('../assets/survey.jpg') no-repeat bottom;
   background-size: cover;
 }
 
 #impact {
-  background: url('/assets/social_impact.jpg') no-repeat center;
+  background: url('../assets/social_impact.jpg') no-repeat center;
   background-size: cover;
 }
 
