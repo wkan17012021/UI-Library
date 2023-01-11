@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlexMasonry</title>
+    <link rel="stylesheet" href="../../resets.css">
+    <style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      .demo {
+        max-width: 1600px;
+        min-height: 500px;
+        margin: 20px auto;
+        padding: 0 20px;
+        overflow-x: hidden;
+      }
+      .inner {
+        padding: 2px;
+      }
+    </style>
+    <link rel="stylesheet" href="../dist/flexmasonry.css" />
+    <link rel="stylesheet" href="../dist/additional_styles.css">
+  </head>
+  <body>
+    <div class="demo">
+      <div class="grid">
+        <div>
+          <div id="event_location" class="inner">
+            <h2 class="txt-base">
+              Book tickets for our upcoming conference, 2023
+            </h2>
+            <img src="../../assets/event_location.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="community" class="inner">
+            <h2>In Your Community</h2>
+          </div>
+        </div>
+        <div>
+          <div id="scholarship" class="inner">
+            <img src="../../assets/scholarship.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="funding" class="inner">
+            <img src="../../assets/apply_funding.webp" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="blog" class="inner">
+            <img src="../../assets/womens_rights.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="highlights" class="inner">
+            <h2>Video placeholder</h2>
+          </div>
+        </div>
+        <div>
+            <div id="academy" class="inner">
+            <h2>Our Academy</h2>
+            </div>
+          </div>
+        <div>
+          <div id="peace" class="inner">
+            <img src="../../assets/peace.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="events" class="inner">
+            <img src="../../assets/events.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="award" class="inner">
+            <img src="../../assets/award.webp" alt="" />
+          </div>
+        </div>
+        <div>
+          <div id="survey" class="inner">
+            <img src="../../assets/survey.jpg" alt="" />
+          </div>
+        </div>
+        <div>
+            <div id="AinA" class="inner">
+            <h2>Ambassadors in Action</h2>
+            </div>
+          </div>
+          <div>
+            <div id="climate" class="inner">
+            <h2>Action against Climate Disaster</h2>
+            </div>
+          </div>
+        <div>
+          <div id="impact" class="inner">
+            <img src="../../assets/social_impact.jpg" alt="" />
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    <script src="../dist/flexmasonry.js"></script>
+    <script>
+      FlexMasonry.init('.grid')
+    </script>
+  </body>
+</html>

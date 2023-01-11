@@ -1,0 +1,46 @@
+#academy,
+#community,
+#survey,
+#climate {
+  background-color: #005b6f;
+}
+
+#scholarship,
+#funding,
+#blog,
+#events,
+#award,
+#AinA {
+  background-color: #0099bf;
+}
+
+/* Styles for text placement */
+h2,
+h3 {
+  color: white;
+}
+
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.txt-base {
+  border: 1px solid red;
+  height: 25%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.txt-right {
+  border: 1px solid red;
+  width: 60%;
+  background-color: #0099bf;
+  vertical-align: text-bottom;
+}
